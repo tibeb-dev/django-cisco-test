@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "boto",
-        "dotenv"
+        "dotenv",
+        "moto"
     ]
 }
