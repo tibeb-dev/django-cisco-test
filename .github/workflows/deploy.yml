@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY:  my-django-app           
   ECS_SERVICE: MY_ECS_SERVICE                 # Amazon ECS service name
   ECS_CLUSTER: MY_ECS_CLUSTER                 # Amazon ECS cluster name
-  ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION # Path to the ECS task definition file
+  ECS_TASK_DEFINITION: /MY_ECS_TASK_DEFINITION.json # Path to the ECS task definition file
   CONTAINER_NAME: MY_CONTAINER_NAME           # Container name in the ECS task definition
 
   permissions:
@@ -50,7 +50,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: MY_ECS_TASK_DEFINITION.json
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
