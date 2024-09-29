@@ -13,6 +13,9 @@ env:
   ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION # Path to the ECS task definition file
   CONTAINER_NAME: MY_CONTAINER_NAME           # Container name in the ECS task definition
 
+  permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Deploy to Amazon ECS
