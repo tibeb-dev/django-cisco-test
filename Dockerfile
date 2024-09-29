@@ -1,6 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9
-
+FROM python:3.10
 # Set the working directory in the container
 WORKDIR /app
 
@@ -18,7 +17,7 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Define environment variable for Django
-ENV DJANGO_SETTINGS_MODULE=myproject.settings
+ENV DJANGO_SETTINGS_MODULE=upload.settings
 
 # Run Django app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "upload.wsgi:application"]
