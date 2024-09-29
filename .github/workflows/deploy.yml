@@ -9,10 +9,9 @@ env:
   AWS_REGION: ${{ secrets.env.AWS_REGION }}
   ECR_REPOSITORY:  my-django-app           
   ECS_SERVICE: MY_ECS_SERVICE                 
-  ECS_CLUSTER: MY_ECS_CLUSTER                 
+  ECS_CLUSTER: my-django-app             
   ECS_TASK_DEFINITION: ./MY_ECS_TASK_DEFINITION.json
-  CONTAINER_NAME: my-django-app   
-         
+  CONTAINER_NAME: my-django-app          
 
   permissions:
   contents: read
