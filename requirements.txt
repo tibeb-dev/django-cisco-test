@@ -25,7 +25,6 @@ dataclasses-json==0.5.14
 dbus-python==1.2.18
 defusedxml==0.8.0rc2
 distro==1.7.0
-distro-info==1.1build1
 Django==5.1
 django-appconf==1.0.6
 django-background-tasks==1.2.8
