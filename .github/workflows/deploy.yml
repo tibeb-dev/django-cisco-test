@@ -11,7 +11,7 @@ env:
   ECS_SERVICE: MY_ECS_SERVICE                 
   ECS_CLUSTER: MY_ECS_CLUSTER                 
   ECS_TASK_DEFINITION: ./MY_ECS_TASK_DEFINITION.json
-  CONTAINER_NAME: MY_ECS_CLUSTER          
+  CONTAINER_NAME: my-django-app          
 
   permissions:
   contents: read
