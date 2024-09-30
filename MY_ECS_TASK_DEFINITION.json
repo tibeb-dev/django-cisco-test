@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:551046429281:task-definition/MY_ECS_TASK_DEFINITION:19",
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:551046429281:task-definition/MY_ECS_TASK_DEFINITION:21",
     "containerDefinitions": [
         {
             "name": "my-django-app",
-            "image": "551046429281.dkr.ecr.eu-north-1.amazonaws.com/my-django-app:a317e662929f9664df1a89dc6db8d8f1c7123c4e",
+            "image": "551046429281.dkr.ecr.eu-north-1.amazonaws.com/my-django-app:78e1cdf1d196dc428d0410bc4e5e743d8c27a8c2",
             "cpu": 1024,
             "portMappings": [
                 {
@@ -23,12 +23,7 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [
-                {
-                    "value": "arn:aws:s3:::s3_django-cisco-project/.env",
-                    "type": "s3"
-                }
-            ],
+            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
             "logConfiguration": {
@@ -50,7 +45,7 @@
     "taskRoleArn": "arn:aws:iam::551046429281:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::551046429281:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 19,
+    "revision": 21,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -68,9 +63,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-        },
-        {
-            "name": "ecs.capability.env-files.s3"
         },
         {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
@@ -102,7 +94,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-09-30T05:28:14.509Z",
+    "registeredAt": "2024-09-30T05:33:15.521Z",
     "registeredBy": "arn:aws:iam::551046429281:root",
     "tags": []
 }
