@@ -112,6 +112,28 @@ python manage.py runserver
 
 By default, the server will be accessible at `http://127.0.0.1:8000/`. You can visit this URL in your web browser.
 
+## Docker Compose
+
+You can also run the Django project with Docker and Docker Compose for easier setup and isolation of services.
+
+### 1. Run the Application
+
+with the `docker-compose.yml` and `Dockerfile` up, you can build and run the application using the following command:
+
+```bash
+docker-compose up --build
+```
+
+This will start both the Django application and the MySQL database in containers. The Django app will be available at `http://localhost:8000`.
+
+### 5. Run Database Migrations
+
+After starting the application, you need to run the migrations to set up the database:
+
+```bash
+docker-compose exec web python manage.py migrate
+```
+
 ### 8. Access the Admin Panel
 
 If you created a superuser, you can access the Django admin panel at:
@@ -122,6 +144,4 @@ http://127.0.0.1:8000/admin/
 
 Log in with your superuser credentials.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
